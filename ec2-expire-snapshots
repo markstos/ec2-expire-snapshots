@@ -651,9 +651,9 @@ an EBS volume that is no longer useful for any purpose.
 
 =item VOLUMEID
 
-EBS volume ids for which EBS snapshots are to be expired (deleted).
+One or more space separated EBS volume ids for which EBS snapshots are to be expired (deleted).
 The EBS volume does not have to exist for its EBS snapshots to be
-found and deleted.
+found and deleted. Required.
 
 =back
 
@@ -676,7 +676,7 @@ When deciding what options to use, it's easier to think of which EBS
 snapshots should be *preserved* instead of which should be expired and
 deleted.
 
-As a general rule, all EBS snapshots that you have not requested to be
+As a general rule, all EBS snapshots for the provided Volume IDs that you have not requested to be
 preserved will be deleted.
 
 Unless overridden, the software always preserves the most recent EBS
